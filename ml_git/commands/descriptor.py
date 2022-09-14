@@ -85,7 +85,7 @@ commands = [
         'options': {
             '--sample-type': {'type': click.Choice(['group', 'range', 'random'])},
             '--sampling': {'default': '1:1000', 'help': help_msg.SAMPLING_OPTION},
-            '--seed': {'default': '1', 'help': help_msg.SEED_OPTION},
+            '--seed': {'default': 1, 'help': help_msg.SEED_OPTION},
             '--retry': {'help': help_msg.RETRY_OPTION, 'validators': [check_integer_value,
                                                                       partial(check_number_range, min=0, max=MAX_INT_VALUE),
                                                                       partial(check_default_value, default=2)]},
@@ -95,7 +95,7 @@ commands = [
                                                                             partial(check_number_range, min=0, max=MAX_INT_VALUE)]},
             '--fail-limit': {'help': help_msg.FAIL_LIMIT, 'validators': [check_integer_value,
                                                                          partial(check_number_range, min=0, max=MAX_INT_VALUE)]},
-            '--full': {'is_flag': True, 'default': False, 'help': help_msg.STATUS_FULL_OPTION},
+            '--full': {'is_flag': True, 'default': False, 'help': help_msg.CHECKOUT_FULL_OPTION},
             '--wizard': {'is_flag': True, 'default': False, 'help': help_msg.WIZARD_OPTION, 'is_eager': True}
         },
 
@@ -129,7 +129,7 @@ commands = [
                                                                             partial(check_number_range, min=0, max=MAX_INT_VALUE)]},
             '--fail-limit': {'help': help_msg.FAIL_LIMIT, 'validators': [check_integer_value,
                                                                          partial(check_number_range, min=0, max=MAX_INT_VALUE)]},
-            '--full': {'is_flag': True, 'default': False, 'help': help_msg.STATUS_FULL_OPTION},
+            '--full': {'is_flag': True, 'default': False, 'help': help_msg.CHECKOUT_FULL_OPTION},
             '--wizard': {'is_flag': True, 'default': False, 'help': help_msg.WIZARD_OPTION, 'is_eager': True}
         },
 
@@ -153,7 +153,7 @@ commands = [
                                                                             partial(check_number_range, min=0, max=MAX_INT_VALUE)]},
             '--fail-limit': {'help': help_msg.FAIL_LIMIT, 'validators': [check_integer_value,
                                                                          partial(check_number_range, min=0, max=MAX_INT_VALUE)]},
-            '--full': {'is_flag': True, 'default': False, 'help': help_msg.STATUS_FULL_OPTION},
+            '--full': {'is_flag': True, 'default': False, 'help': help_msg.CHECKOUT_FULL_OPTION},
             '--wizard': {'is_flag': True, 'default': False, 'help': help_msg.WIZARD_OPTION, 'is_eager': True}
         },
 
@@ -179,7 +179,7 @@ commands = [
         'options': {
             '--sample-type': {'type': click.Choice(['group', 'range', 'random'])},
             '--sampling': {'default': '1:1000', 'help': help_msg.SAMPLING_OPTION},
-            '--seed': {'default': '1', 'help': help_msg.SEED_OPTION},
+            '--seed': {'default': 1, 'help': help_msg.SEED_OPTION},
             '--retry': {'help': help_msg.RETRY_OPTION, 'validators': [check_integer_value,
                                                                       partial(check_number_range, min=0, max=MAX_INT_VALUE),
                                                                       partial(check_default_value, default=2)]}
